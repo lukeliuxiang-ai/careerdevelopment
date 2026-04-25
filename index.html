@@ -101,17 +101,19 @@
       gap: 24px;
       flex-wrap: wrap;
     }
+    /* 修改：教练头像改为图片样式 */
     .coach-avatar {
       flex-shrink: 0;
       width: 100px;
       height: 100px;
-      background: #2c5a7a;
-      border-radius: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 42px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #2c5a7a;
+    }
+    .coach-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .coach-info { flex: 1; }
     .coach-info h3 { color: #1a3c5c; margin-bottom: 8px; font-size: 20px; }
@@ -260,7 +262,7 @@
       .feedback-grid { gap: 8px; padding: 8px; }
       .case-gallery { padding: 12px; }
       .coach-card { flex-direction: column; align-items: center; text-align: center; }
-      .coach-avatar { width: 80px; height: 80px; font-size: 36px; }
+      .coach-avatar { width: 80px; height: 80px; }
     }
     .footer-card {
       background: linear-gradient(120deg, #eef3f5, #fff);
@@ -325,10 +327,11 @@
 
 <div class="content">
 
-  <!-- 教练个人介绍专区 - 从问答0416.html移植 -->
+  <!-- 教练个人介绍专区 -->
   <div class="coach-card">
+    <!-- 修改：圆形头像改为图片 -->
     <div class="coach-avatar">
-      <i class="fas fa-user-tie"></i>
+      <img src="images/lukeliu.png" alt="刘翔 Luke Liu">
     </div>
     <div class="coach-info">
       <h3>刘翔 Luke Liu</h3>
@@ -351,15 +354,15 @@
   <div class="section" id="s1">
     <div class="section-title"><div class="section-num">一</div><h2>🌪️ 公司业绩下滑 · 年龄增长 · 未来焦虑</h2></div>
     <div class="section-quote">年薪30万+的你不是没有能力，你只是在一个不确定的环境里，忘了自己还有什么。</div>
-    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">公司业绩一年不如一年，我35+了，担心随时被裁，怎么办？</div><i class="fas fa-chevron-down" style="margin-left:auto; color:#aaa;"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">这种焦虑非常真实。但焦虑的根源不是你不行，而是<strong>你失去了对自己优势的掌控感</strong>。哈里逊测评的价值不是给你一个新工作，而是让你回到日常工作中，重新找到那个<strong>“我比别人做得好的那个点”</strong>。比如：你是天生擅长数据分析？还是特别会协调冲突？或是汇报时总能抓住重点？——看清这些，你就不再把命运交给公司的涨跌，而是开始经营自己的职业资产。</div></div></div>
-    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">测评能帮我保住现在的工作吗？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">不能直接“保住”，但能让你<strong>的职业发展变得可持续</strong>。当下VUCA的市场环境下，70%的人都要做好准备3-5年换一份工作；如果在年龄不断增长的情况下仍然在就业市场站稳脚跟，唯一的破局之道在于<strong>发现你的个人独特优势</strong>。当向内看变得清澈，向前看才能笃定自信。</div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">公司业绩一年不如一年，我35+了，担心随时被裁，怎么办？</div><i class="fas fa-chevron-down" style="margin-left:auto; color:#aaa;"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">这种焦虑非常真实。但焦虑的根源不是你不行，而是<strong>你失去了对自己优势的掌控感</strong>。哈里逊测评的价值不是给你一个新工作，而是让你回到日常工作中，重新找到那个<strong>"我比别人做得好的那个点"</strong>。比如：你是天生擅长数据分析？还是特别会协调冲突？或是汇报时总能抓住重点？——看清这些，你就不再把命运交给公司的涨跌，而是开始经营自己的职业资产。</div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">测评能帮我保住现在的工作吗？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">不能直接"保住"，但能让你<strong>的职业发展变得可持续</strong>。当下VUCA的市场环境下，70%的人都要做好准备3-5年换一份工作；如果在年龄不断增长的情况下仍然在就业市场站稳脚跟，唯一的破局之道在于<strong>发现你的个人独特优势</strong>。当向内看变得清澈，向前看才能笃定自信。</div></div></div>
   </div>
 
   <!-- 场景2：新公司适应 / 向上管理 -->
   <div class="section" id="s2">
     <div class="section-title"><div class="section-num">二</div><h2>🪜 刚入职新公司 · 之前几次适应困难 · 向上管理</h2></div>
-    <div class="section-quote">适应新环境不是靠“熬”，而是靠“看懂自己”和“看懂老板”。</div>
-    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我之前跳槽几次，每次都有适应问题，这次刚入职新公司，很担心重蹈覆辙。</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">反复适应不良，往往不是能力问题，而是<strong>你不了解自己的职业兴趣和行为偏好，也不了解老板的管理风格</strong>。哈里逊测评会告诉你：你是更擅长艺术创作还是更喜欢理论研究，你是期望喜欢明确指令还是自主发挥？你倾向提前规划还是临场应变？你的向上汇报风格是什么？——知道了这些，你从求职一开始<strong>就能主动地切合个人实际去搜寻高度匹配的雇主，而不是被动地接受一份工作心存忐忑地“熬过试用期”</strong>。很多学员做完测评后说：“原来不是我不好，是我一直在用不适合自己的方式工作。选对赛道跟对人，你的职场生存几率会飙升80%。”</div></div></div>
+    <div class="section-quote">适应新环境不是靠"熬"，而是靠"看懂自己"和"看懂老板"。</div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我之前跳槽几次，每次都有适应问题，这次刚入职新公司，很担心重蹈覆辙。</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">反复适应不良，往往不是能力问题，而是<strong>你不了解自己的职业兴趣和行为偏好，也不了解老板的管理风格</strong>。哈里逊测评会告诉你：你是更擅长艺术创作还是更喜欢理论研究，你是期望喜欢明确指令还是自主发挥？你倾向提前规划还是临场应变？你的向上汇报风格是什么？——知道了这些，你从求职一开始<strong>就能主动地切合个人实际去搜寻高度匹配的雇主，而不是被动地接受一份工作心存忐忑地"熬过试用期"</strong>。很多学员做完测评后说："原来不是我不好，是我一直在用不适合自己的方式工作。选对赛道跟对人，你的职场生存几率会飙升80%。"</div></div></div>
     <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">向上管理具体怎么做？测评能帮我吗？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">向上管理的核心是<strong>让老板用他舒服的方式，看到你的价值</strong>。我们会基于你的测评结果，给你具体的场景建议：<div class="grip-grid"><span class="grip-item">📋 每周例会怎么发言更出彩</span><span class="grip-item">⏰ 每日3分钟汇报说什么</span><span class="grip-item">🤝 当与其他部门经理有异议的时候该持什么立场</span><span class="grip-item">🍜 如何向老板提出对项目的建议与反馈 </span></div>这些日常小事，恰恰是建立信任和个人影响力、实现可持续职业发展的关键。</div></div></div>
   </div>
 
@@ -367,29 +370,29 @@
   <div class="section" id="s3">
     <div class="section-title"><div class="section-num">三</div><h2>📈 发展受限 · 无晋升可能 · 对外面没信心</h2></div>
     <div class="section-quote">你看不到希望，不是因为你不行，而是因为你只看到了公司的天花板，没看到自己的潜力。</div>
-    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我在公司5年了，升职无望，加薪没戏，但又不敢跳槽，怎么办？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">这是一个典型的“瓶颈期”。很多35+职场人卡在这个状态：<strong>既不满意现状，又没有勇气离开</strong>。我们的做法不是催你跳槽，而是帮你<strong>设定未来职业目标，在当前岗位上重新找到成长感</strong>。比如你希望将来能晋升成为总监，测评发现你有极高的情商与人际沟通能力，你可以有意识地在项目协调当中发挥你对不同的利益相关者影响力（上级、同事、下属、供应商）；如果你喜欢钻研，则应当选择一个细分赛道力求成为该领域的专家，并有意识地构建你的个人影响力。<strong>有了职业目标，日复一日的工作就不再是“搬砖”，而是“修炼”</strong>。机会来临时，你也有了一身硬本领。</div></div></div>
-    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">对外面市场不熟悉，不知道自己出去值多少钱，缺乏信心。</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">信心不是凭空来的，而是来自<strong>对自己优势的确定性</strong>。你的市场价值判断不光是参考咨询公司所给的薪酬报告，同时也要基于你过往业绩的大小，更重要的是<strong>在脱离了原先大厂平台之后，你是否还能复刻从前的辉煌？你能把多少不确定性变为确定性？</strong>。作为资深的HR总监，我可以给你提供客观中允的专业意见。<strong>就是因为知道自己“与众不同的非凡价值”，面试时底气完全不同</strong>。忽略这一点，面试当中被对方灵魂拷问就支支吾吾，眼神漂移，再多的面试技巧也无助于事。</div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我在公司5年了，升职无望，加薪没戏，但又不敢跳槽，怎么办？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">这是一个典型的"瓶颈期"。很多35+职场人卡在这个状态：<strong>既不满意现状，又没有勇气离开</strong>。我们的做法不是催你跳槽，而是帮你<strong>设定未来职业目标，在当前岗位上重新找到成长感</strong>。比如你希望将来能晋升成为总监，测评发现你有极高的情商与人际沟通能力，你可以有意识地在项目协调当中发挥你对不同的利益相关者影响力（上级、同事、下属、供应商）；如果你喜欢钻研，则应当选择一个细分赛道力求成为该领域的专家，并有意识地构建你的个人影响力。<strong>有了职业目标，日复一日的工作就不再是"搬砖"，而是"修炼"</strong>。机会来临时，你也有了一身硬本领。</div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">对外面市场不熟悉，不知道自己出去值多少钱，缺乏信心。</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">信心不是凭空来的，而是来自<strong>对自己优势的确定性</strong>。你的市场价值判断不光是参考咨询公司所给的薪酬报告，同时也要基于你过往业绩的大小，更重要的是<strong>在脱离了原先大厂平台之后，你是否还能复刻从前的辉煌？你能把多少不确定性变为确定性？</strong>。作为资深的HR总监，我可以给你提供客观中允的专业意见。<strong>就是因为知道自己"与众不同的非凡价值"，面试时底气完全不同</strong>。忽略这一点，面试当中被对方灵魂拷问就支支吾吾，眼神漂移，再多的面试技巧也无助于事。</div></div></div>
   </div>
 
   <!-- 场景4：自我期许高 / 不满足搬砖 / 想要认知和能力跃升 -->
   <div class="section" id="s4">
     <div class="section-title"><div class="section-num">四</div><h2>🚀 自我期许高 · 不满足现状 · 想要跃升</h2></div>
     <div class="section-quote">你不是不想努力，你是不想在看不到未来的方向上努力。</div>
-    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我没有被裁员风险，但每天像在“搬砖”，感觉自己在退步，怎么办？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">这是很多优秀职场人的“体面困境”——<strong>工作稳定，但成长停滞</strong>。你对未来有高期许，说明你有上进心，但你缺的是一个<strong>可以发力、看得见成长的方向</strong>。哈里逊测评会帮你找到那个方向：你的职业兴趣、行为偏好、动机模式，哪些能力是你在日常工作中可以刻意练习的？<div class="tip-box">🎯 比如：你可以在每周例会上刻意练习“结构化表达”，在每天和领导的沟通中练习“向上汇报”，在跨部门协作中练习“影响力谈判”，类似的项目，你用商业而非纯技术的眼光来识别会有全新的视角；哪怕是技术工种，你也要会识别工作任务的轻重缓急，合理分配资源和精力——<strong>有了目标，每一件日常工作都是你能力的修炼场</strong>。</div></div></div></div>
-    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我希望能让自己变得更有竞争力，但不知道从哪里开始。</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">从“看清自己”开始。我们的服务就是<strong>一份基于30年行为科学的专业测评 + 一次60分钟的教练解读</strong>。解读结束后，你会带走：<ul><li>📊 你的3-5个核心优势（别人很难复制的）</li><li>🎯 2-3个日常工作中可以立即开始练习的“抓手”</li><li>📈 一个初步的可持续职业发展目标</li></ul><strong>你不需要辞职，不需要转行，只需要在每天的工作中多一个视角、多一个练习</strong>。半年后回头看，你会发现自己的认知和能力已经有了质的跃升。</div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我没有被裁员风险，但每天像在"搬砖"，感觉自己在退步，怎么办？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">这是很多优秀职场人的"体面困境"——<strong>工作稳定，但成长停滞</strong>。你对未来有高期许，说明你有上进心，但你缺的是一个<strong>可以发力、看得见成长的方向</strong>。哈里逊测评会帮你找到那个方向：你的职业兴趣、行为偏好、动机模式，哪些能力是你在日常工作中可以刻意练习的？<div class="tip-box">🎯 比如：你可以在每周例会上刻意练习"结构化表达"，在每天和领导的沟通中练习"向上汇报"，在跨部门协作中练习"影响力谈判"，类似的项目，你用商业而非纯技术的眼光来识别会有全新的视角；哪怕是技术工种，你也要会识别工作任务的轻重缓急，合理分配资源和精力——<strong>有了目标，每一件日常工作都是你能力的修炼场</strong>。</div></div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我希望能让自己变得更有竞争力，但不知道从哪里开始。</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">从"看清自己"开始。我们的服务就是<strong>一份基于30年行为科学的专业测评 + 一次60分钟的教练解读</strong>。解读结束后，你会带走：<ul><li>📊 你的3-5个核心优势（别人很难复制的）</li><li>🎯 2-3个日常工作中可以立即开始练习的"抓手"</li><li>📈 一个初步的可持续职业发展目标</li></ul><strong>你不需要辞职，不需要转行，只需要在每天的工作中多一个视角、多一个练习</strong>。半年后回头看，你会发现自己的认知和能力已经有了质的跃升。</div></div></div>
   </div>
 
   <!-- 新增：40+岁做测评会不会太晚 -->
   <div class="section">
     <div class="section-title"><div class="section-num">+</div><h2>⏰ 年龄不是问题 · 任何时候都不晚</h2></div>
-    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我40+了，做测评会不会太晚？</div><i class="fas fa-chevron-down" style="margin-left:auto; color:#aaa;"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text"><strong>一点也不晚。</strong> 我们服务过的学员中，40岁以上占比超过35%，最高龄的51岁。事实上，40+恰恰是职场人最具爆发力的阶段——你比年轻人更懂行业、更懂人性、更懂自己真正想要什么。<strong>测评不是改变你，而是让你用好已有的积累。</strong>一位46岁的学员做完测评后感慨：“早十年做就好了，但现在做也不晚——至少未来的二十年，我不会再走弯路了。”种一棵树最好的时间是十年前，其次是现在。你的下半场职业生涯还有20+年，值得好好规划。</div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我40+了，做测评会不会太晚？</div><i class="fas fa-chevron-down" style="margin-left:auto; color:#aaa;"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text"><strong>一点也不晚。</strong> 我们服务过的学员中，40岁以上占比超过35%，最高龄的51岁。事实上，40+恰恰是职场人最具爆发力的阶段——你比年轻人更懂行业、更懂人性、更懂自己真正想要什么。<strong>测评不是改变你，而是让你用好已有的积累。</strong>一位46岁的学员做完测评后感慨："早十年做就好了，但现在做也不晚——至少未来的二十年，我不会再走弯路了。"种一棵树最好的时间是十年前，其次是现在。你的下半场职业生涯还有20+年，值得好好规划。</div></div></div>
   </div>
 
   <!-- 价格与核心价值 -->
   <div class="section" id="s5">
     <div class="section-title"><div class="section-num">五</div><h2>💰 1299元 · 你能得到什么</h2></div>
-    <div class="qa-card" id="price"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">1299元包含哪些服务？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text"><strong>✅ 哈里逊Harrison职业测评授权（175+维度）</strong><br><strong>✅ 完整版专业测评报告（电子版，永久可查）</strong><br><strong>✅ 75分钟1对1教练深度解读（线上视频/语音）</strong><br><strong>✅ 3个以上日常工作中的“可练习抓手”建议</strong><br><strong>✅ 3天微信持续答疑</strong><br><strong>✅ 领取30万+高薪求职面试秘籍</strong><br>这不是一次“听完就结束”的咨询，投资仅月薪的5%甚至更低<strong>就可以在日常工作中找到可持续职业发展的起点</strong>。</div></div></div>
-    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">什么是“日常抓手”？能举个例子吗？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">“抓手”是你<strong>不需要换工作、不需要额外时间，在现有岗位上就能刻意练习的具体场景</strong>。比如：<div class="grip-grid"><span class="grip-item">🗣️ 每周例会发言时练习“结论先行”</span><span class="grip-item">📝 在N+1和N+2都在场的情况下探讨公司战略层面的问题”</span><span class="grip-item">🤝 与供应商谈判时练习“专业影响力表达”</span><span class="grip-item">🍽️ 处理员工冲突与客户投诉时练习“高情商沟通”</span></div><strong>有了职业目标，日复一日的工作就不再是“消耗”，而是“修炼”</strong>。无论何时需要找工作，你可以很自信地告诉雇主我在之前这个平凡的岗位上付出过不平凡的努力，也取得过不平凡的业绩。哪怕已经39岁、43岁，这种不平凡也值得雇主珍视。</div></div></div>
+    <div class="qa-card" id="price"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">1299元包含哪些服务？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text"><strong>✅ 哈里逊Harrison职业测评授权（175+维度）</strong><br><strong>✅ 完整版专业测评报告（电子版，永久可查）</strong><br><strong>✅ 75分钟1对1教练深度解读（线上视频/语音）</strong><br><strong>✅ 3个以上日常工作中的"可练习抓手"建议</strong><br><strong>✅ 3天微信持续答疑</strong><br><strong>✅ 领取30万+高薪求职面试秘籍</strong><br>这不是一次"听完就结束"的咨询，投资仅月薪的5%甚至更低<strong>就可以在日常工作中找到可持续职业发展的起点</strong>。</div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">什么是"日常抓手"？能举个例子吗？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">"抓手"是你<strong>不需要换工作、不需要额外时间，在现有岗位上就能刻意练习的具体场景</strong>。比如：<div class="grip-grid"><span class="grip-item">🗣️ 每周例会发言时练习"结论先行"</span><span class="grip-item">📝 在N+1和N+2都在场的情况下探讨公司战略层面的问题"</span><span class="grip-item">🤝 与供应商谈判时练习"专业影响力表达"</span><span class="grip-item">🍽️ 处理员工冲突与客户投诉时练习"高情商沟通"</span></div><strong>有了职业目标，日复一日的工作就不再是"消耗"，而是"修炼"</strong>。无论何时需要找工作，你可以很自信地告诉雇主我在之前这个平凡的岗位上付出过不平凡的努力，也取得过不平凡的业绩。哪怕已经39岁、43岁，这种不平凡也值得雇主珍视。</div></div></div>
     <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">可以先了解一下再决定吗？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">当然。我们提供<strong>免费20分钟职场诊断通话</strong>，你可以先聊聊你的现状和困惑，确认适合自己再做决定。<a href="#freeConsult" style="color:#e89c3e;">点击这里预约 →</a></div></div></div>
   </div>
 
