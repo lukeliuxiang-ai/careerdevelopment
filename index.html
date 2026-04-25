@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>35+职场陪跑 · 在岗位上找到跃升抓手 | 睿观生涯</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', -apple-system, sans-serif;
+      background: #f4f7fc;
+      color: #1e3347;
+      line-height: 1.5;
+    }
+    .page-header {
+      background: linear-gradient(135deg, #1a3c5c 0%, #2c5a7a 100%);
+      color: #fff;
+      padding: 28px 24px 24px;
+      text-align: center;
+    }
+    .header-logos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto 16px;
+      padding: 0 16px;
+    }
+    .header-logos img { height: 70px; width: auto; object-fit: contain; }
+    .header-logos img:first-child { position: relative; top: -2px; }
+    .brand-tag { font-size: 11px; letter-spacing: 2px; opacity: 0.8; margin-bottom: 6px; }
+    h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+    .subhead { font-size: 14px; opacity: 0.92; margin-bottom: 10px; }
+    .badge-row { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+    .badge { background: rgba(255,255,255,0.15); border-radius: 40px; padding: 4px 14px; font-size: 11px; }
+    .toc-sticky {
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 120;
+      border-bottom: 1px solid #dce5ec;
+      padding: 0 16px;
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+    }
+    .toc-sticky a { padding: 10px 14px; font-size: 12px; font-weight: 500; color: #2c5a7a; text-decoration: none; white-space: nowrap; border-bottom: 3px solid transparent; }
+    .toc-sticky a:hover { border-bottom-color: #e89c3e; }
+    .quick-ask {
+      background: #eef3f5;
+      margin: 16px 16px 0;
+      border-radius: 40px;
+      padding: 10px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .quick-ask a { background: white; border-radius: 40px; padding: 5px 14px; font-size: 12px; color: #2c5a7a; text-decoration: none; }
+    .content { max-width: 900px; margin: 0 auto; padding: 24px 20px 50px; }
+    .section { margin-bottom: 40px; }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      border-left: 4px solid #e89c3e;
+      padding-left: 14px;
+    }
+    .section-num {
+      background: #2c5a7a20;
+      color: #2c5a7a;
+      width: 32px;
+      height: 32px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+    }
+    .section-title h2 { font-size: 20px; font-weight: 700; color: #1a3c5c; }
+    .section-quote {
+      background: #eef3f5;
+      border-left: 4px solid #e89c3e;
+      padding: 10px 16px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: #3a6e8c;
+    }
+    /* 教练介绍卡片 */
+    .coach-card {
+      background: linear-gradient(135deg, #f8fbfe 0%, #eff5fa 100%);
+      border-radius: 24px;
+      padding: 24px;
+      margin-bottom: 32px;
+      border: 1px solid #d4e2ec;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .coach-avatar {
+      flex-shrink: 0;
+      width: 100px;
+      height: 100px;
+      background: #2c5a7a;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 42px;
+    }
+    .coach-info { flex: 1; }
+    .coach-info h3 { color: #1a3c5c; margin-bottom: 8px; font-size: 20px; }
+    .coach-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .coach-tag { background: white; border-radius: 20px; padding: 4px 12px; font-size: 12px; color: #2c5a7a; border: 1px solid #c8dae5; }
+    .coach-desc { font-size: 14px; color: #3a6e8c; line-height: 1.6; }
+    /* 问答卡片 */
+    .qa-card {
+      background: white;
+      border-radius: 18px;
+      margin-bottom: 12px;
+      border: 1px solid #dce5ec;
+      overflow: hidden;
+    }
+    .qa-q {
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+    .q-icon {
+      background: #e8f0f5;
+      width: 28px;
+      height: 28px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #2c5a7a;
+      font-size: 13px;
+    }
+    .q-text { font-weight: 700; font-size: 15px; color: #1e3347; flex: 1; }
+    .qa-a {
+      padding: 0 18px 16px 58px;
+      display: none;
+      border-top: 1px solid #e8eff4;
+    }
+    .qa-a.active { display: flex; gap: 10px; }
+    .a-icon {
+      background: #fef6e8;
+      width: 26px;
+      height: 26px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #e89c3e;
+      flex-shrink: 0;
+      font-size: 12px;
+    }
+    .a-text { font-size: 14px; color: #2a4b66; line-height: 1.65; flex: 1; }
+    .a-text strong { color: #e89c3e; }
+    .a-text ul { margin: 8px 0 8px 16px; }
+    .tip-box {
+      background: #fef6e8;
+      border-left: 3px solid #e89c3e;
+      padding: 10px 14px;
+      margin: 10px 0;
+      border-radius: 12px;
+      font-size: 13px;
+    }
+    .grip-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 12px 0;
+    }
+    .grip-item {
+      background: #f0f4f8;
+      border-radius: 24px;
+      padding: 6px 14px;
+      font-size: 12px;
+      color: #2c5a7a;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    /* 成功案例图片区 */
+    .case-gallery {
+      margin-top: 20px;
+      margin-bottom: 8px;
+      background: #f8fafc;
+      border-radius: 24px;
+      padding: 16px;
+      border: 1px solid #e2edf2;
+    }
+    .case-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: #1f5e6e;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .gallery-container {
+      position: relative;
+      width: 100%;
+      background: #eef2f5;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .ratio-16-9 {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      background: #eef2f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .feedback-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 12px;
+    }
+    .feedback-item {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .feedback-item img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 16px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+      background: white;
+      transition: transform 0.2s;
+    }
+    .feedback-item img:hover {
+      transform: scale(1.01);
+    }
+    @media (max-width: 780px) {
+      .feedback-grid { gap: 8px; padding: 8px; }
+      .case-gallery { padding: 12px; }
+      .coach-card { flex-direction: column; align-items: center; text-align: center; }
+      .coach-avatar { width: 80px; height: 80px; font-size: 36px; }
+    }
+    .footer-card {
+      background: linear-gradient(120deg, #eef3f5, #fff);
+      border-radius: 28px;
+      padding: 22px 20px;
+      margin-top: 28px;
+      text-align: center;
+    }
+    .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin: 16px 0 10px; }
+    .btn { background: #2c5a7a; color: white; padding: 8px 20px; border-radius: 40px; text-decoration: none; font-weight: 600; font-size: 13px; }
+    .btn-outline { background: transparent; border: 1px solid #2c5a7a; color: #2c5a7a; }
+    .cta-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2c5a7a;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 13px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+    .cta-float:hover { background: #e89c3e; }
+    @media (max-width: 640px) {
+      .qa-a { padding-left: 16px; }
+      .cta-float { padding: 6px 16px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="header-logos">
+    <img src="Company logo.png" alt="睿观生涯教练" style="height: 80px; margin-left:-25px;">
+    <img src="HA logo.png" alt="Harrison Assessments" style="height: 45px;">
+  </div>
+  <div class="brand-tag">广州睿观管理咨询有限公司</div>
+  <h1>35+职场陪跑 · 在岗位上找到跃升抓手</h1>
+  <div class="subhead">不跳槽也能破局 · 在日常工作中修炼可持续竞争力</div>
+  <div class="badge-row">
+    <div class="badge">克服年龄焦虑</div>
+    <div class="badge">新环境向上管理</div>
+    <div class="badge">突破晋升瓶颈</div>
+    <div class="badge">认知能力跃升</div>
+  </div>
+</div>
+
+<div class="toc-sticky">
+  <a href="#s1">🌪️ 年龄焦虑</a><a href="#s2">🪜 新公司适应</a><a href="#s3">📈 晋升瓶颈</a><a href="#s4">🚀 自我跃升</a><a href="#s5">💰 价格</a>
+</div>
+<div class="quick-ask">
+  <a href="#price">💰 1299元包含什么？</a>
+  <a href="#grip">🎯 日常抓手是什么？</a>
+  <a href="#free">🎁 免费沟通</a>
+</div>
+
+<div class="content">
+
+  <!-- 教练个人介绍专区 - 从问答0416.html移植 -->
+  <div class="coach-card">
+    <div class="coach-avatar">
+      <i class="fas fa-user-tie"></i>
+    </div>
+    <div class="coach-info">
+      <h3>刘翔 Luke Liu</h3>
+      <div class="coach-tags">
+        <span class="coach-tag">Harrison官方认证测评师</span>
+        <span class="coach-tag">GCDF全球职业规划师</span>
+        <span class="coach-tag">RCC国际商务教练</span>
+        <span class="coach-tag">10年500强外企HR管理经验</span>
+        <span class="coach-tag">10年HR咨询公司经验</span>
+      </div>
+      <div class="coach-desc">
+        <p>从五百强外企基层岗位做起，一路成长为广佛城区HR总监，再到资深转型教练。20+年跨行业经验，服务过IT互联网/制造业/新能源/高端酒店餐饮/医疗服务业等领域<strong>500+学员</strong>。</p>
+        <p style="margin-top: 8px;">🎯 <strong>个人使命：</strong>通过专业工具与流程，帮助中高阶职场人士选对赛道跟对人，打破35岁职场魔咒，实现可持续职业发展。</p>
+        <p style="margin-top: 6px;">💡 <strong>转型经历：</strong>我自己就是从传统行业成功转型的实践者，我走过的路，正是你将要走的路。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 场景1：年龄焦虑 / 公司下滑 -->
+  <div class="section" id="s1">
+    <div class="section-title"><div class="section-num">一</div><h2>🌪️ 公司业绩下滑 · 年龄增长 · 未来焦虑</h2></div>
+    <div class="section-quote">年薪30万+的你不是没有能力，你只是在一个不确定的环境里，忘了自己还有什么。</div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">公司业绩一年不如一年，我35+了，担心随时被裁，怎么办？</div><i class="fas fa-chevron-down" style="margin-left:auto; color:#aaa;"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">这种焦虑非常真实。但焦虑的根源不是你不行，而是<strong>你失去了对自己优势的掌控感</strong>。哈里逊测评的价值不是给你一个新工作，而是让你回到日常工作中，重新找到那个<strong>“我比别人做得好的那个点”</strong>。比如：你是天生擅长数据分析？还是特别会协调冲突？或是汇报时总能抓住重点？——看清这些，你就不再把命运交给公司的涨跌，而是开始经营自己的职业资产。</div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">测评能帮我保住现在的工作吗？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">不能直接“保住”，但能让你<strong>的职业发展变得可持续</strong>。当下VUCA的市场环境下，70%的人都要做好准备3-5年换一份工作；如果在年龄不断增长的情况下仍然在就业市场站稳脚跟，唯一的破局之道在于<strong>发现你的个人独特优势</strong>。当向内看变得清澈，向前看才能笃定自信。</div></div></div>
+  </div>
+
+  <!-- 场景2：新公司适应 / 向上管理 -->
+  <div class="section" id="s2">
+    <div class="section-title"><div class="section-num">二</div><h2>🪜 刚入职新公司 · 之前几次适应困难 · 向上管理</h2></div>
+    <div class="section-quote">适应新环境不是靠“熬”，而是靠“看懂自己”和“看懂老板”。</div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我之前跳槽几次，每次都有适应问题，这次刚入职新公司，很担心重蹈覆辙。</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">反复适应不良，往往不是能力问题，而是<strong>你不了解自己的职业兴趣和行为偏好，也不了解老板的管理风格</strong>。哈里逊测评会告诉你：你是更擅长艺术创作还是更喜欢理论研究，你是期望喜欢明确指令还是自主发挥？你倾向提前规划还是临场应变？你的向上汇报风格是什么？——知道了这些，你从求职一开始<strong>就能主动地切合个人实际去搜寻高度匹配的雇主，而不是被动地接受一份工作心存忐忑地“熬过试用期”</strong>。很多学员做完测评后说：“原来不是我不好，是我一直在用不适合自己的方式工作。选对赛道跟对人，你的职场生存几率会飙升80%。”</div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">向上管理具体怎么做？测评能帮我吗？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">向上管理的核心是<strong>让老板用他舒服的方式，看到你的价值</strong>。我们会基于你的测评结果，给你具体的场景建议：<div class="grip-grid"><span class="grip-item">📋 每周例会怎么发言更出彩</span><span class="grip-item">⏰ 每日3分钟汇报说什么</span><span class="grip-item">🤝 当与其他部门经理有异议的时候该持什么立场</span><span class="grip-item">🍜 如何向老板提出对项目的建议与反馈 </span></div>这些日常小事，恰恰是建立信任和个人影响力、实现可持续职业发展的关键。</div></div></div>
+  </div>
+
+  <!-- 场景3：职业发展受限 / 无晋升空间 / 对外部缺乏信心 -->
+  <div class="section" id="s3">
+    <div class="section-title"><div class="section-num">三</div><h2>📈 发展受限 · 无晋升可能 · 对外面没信心</h2></div>
+    <div class="section-quote">你看不到希望，不是因为你不行，而是因为你只看到了公司的天花板，没看到自己的潜力。</div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我在公司5年了，升职无望，加薪没戏，但又不敢跳槽，怎么办？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">这是一个典型的“瓶颈期”。很多35+职场人卡在这个状态：<strong>既不满意现状，又没有勇气离开</strong>。我们的做法不是催你跳槽，而是帮你<strong>设定未来职业目标，在当前岗位上重新找到成长感</strong>。比如你希望将来能晋升成为总监，测评发现你有极高的情商与人际沟通能力，你可以有意识地在项目协调当中发挥你对不同的利益相关者影响力（上级、同事、下属、供应商）；如果你喜欢钻研，则应当选择一个细分赛道力求成为该领域的专家，并有意识地构建你的个人影响力。<strong>有了职业目标，日复一日的工作就不再是“搬砖”，而是“修炼”</strong>。机会来临时，你也有了一身硬本领。</div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">对外面市场不熟悉，不知道自己出去值多少钱，缺乏信心。</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">信心不是凭空来的，而是来自<strong>对自己优势的确定性</strong>。你的市场价值判断不光是参考咨询公司所给的薪酬报告，同时也要基于你过往业绩的大小，更重要的是<strong>在脱离了原先大厂平台之后，你是否还能复刻从前的辉煌？你能把多少不确定性变为确定性？</strong>。作为资深的HR总监，我可以给你提供客观中允的专业意见。<strong>就是因为知道自己“与众不同的非凡价值”，面试时底气完全不同</strong>。忽略这一点，面试当中被对方灵魂拷问就支支吾吾，眼神漂移，再多的面试技巧也无助于事。</div></div></div>
+  </div>
+
+  <!-- 场景4：自我期许高 / 不满足搬砖 / 想要认知和能力跃升 -->
+  <div class="section" id="s4">
+    <div class="section-title"><div class="section-num">四</div><h2>🚀 自我期许高 · 不满足现状 · 想要跃升</h2></div>
+    <div class="section-quote">你不是不想努力，你是不想在看不到未来的方向上努力。</div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我没有被裁员风险，但每天像在“搬砖”，感觉自己在退步，怎么办？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">这是很多优秀职场人的“体面困境”——<strong>工作稳定，但成长停滞</strong>。你对未来有高期许，说明你有上进心，但你缺的是一个<strong>可以发力、看得见成长的方向</strong>。哈里逊测评会帮你找到那个方向：你的职业兴趣、行为偏好、动机模式，哪些能力是你在日常工作中可以刻意练习的？<div class="tip-box">🎯 比如：你可以在每周例会上刻意练习“结构化表达”，在每天和领导的沟通中练习“向上汇报”，在跨部门协作中练习“影响力谈判”，类似的项目，你用商业而非纯技术的眼光来识别会有全新的视角；哪怕是技术工种，你也要会识别工作任务的轻重缓急，合理分配资源和精力——<strong>有了目标，每一件日常工作都是你能力的修炼场</strong>。</div></div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我希望能让自己变得更有竞争力，但不知道从哪里开始。</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">从“看清自己”开始。我们的服务就是<strong>一份基于30年行为科学的专业测评 + 一次60分钟的教练解读</strong>。解读结束后，你会带走：<ul><li>📊 你的3-5个核心优势（别人很难复制的）</li><li>🎯 2-3个日常工作中可以立即开始练习的“抓手”</li><li>📈 一个初步的可持续职业发展目标</li></ul><strong>你不需要辞职，不需要转行，只需要在每天的工作中多一个视角、多一个练习</strong>。半年后回头看，你会发现自己的认知和能力已经有了质的跃升。</div></div></div>
+  </div>
+
+  <!-- 新增：40+岁做测评会不会太晚 -->
+  <div class="section">
+    <div class="section-title"><div class="section-num">+</div><h2>⏰ 年龄不是问题 · 任何时候都不晚</h2></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">我40+了，做测评会不会太晚？</div><i class="fas fa-chevron-down" style="margin-left:auto; color:#aaa;"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text"><strong>一点也不晚。</strong> 我们服务过的学员中，40岁以上占比超过35%，最高龄的51岁。事实上，40+恰恰是职场人最具爆发力的阶段——你比年轻人更懂行业、更懂人性、更懂自己真正想要什么。<strong>测评不是改变你，而是让你用好已有的积累。</strong>一位46岁的学员做完测评后感慨：“早十年做就好了，但现在做也不晚——至少未来的二十年，我不会再走弯路了。”种一棵树最好的时间是十年前，其次是现在。你的下半场职业生涯还有20+年，值得好好规划。</div></div></div>
+  </div>
+
+  <!-- 价格与核心价值 -->
+  <div class="section" id="s5">
+    <div class="section-title"><div class="section-num">五</div><h2>💰 1299元 · 你能得到什么</h2></div>
+    <div class="qa-card" id="price"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">1299元包含哪些服务？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text"><strong>✅ 哈里逊Harrison职业测评授权（175+维度）</strong><br><strong>✅ 完整版专业测评报告（电子版，永久可查）</strong><br><strong>✅ 75分钟1对1教练深度解读（线上视频/语音）</strong><br><strong>✅ 3个以上日常工作中的“可练习抓手”建议</strong><br><strong>✅ 3天微信持续答疑</strong><br><strong>✅ 领取30万+高薪求职面试秘籍</strong><br>这不是一次“听完就结束”的咨询，投资仅月薪的5%甚至更低<strong>就可以在日常工作中找到可持续职业发展的起点</strong>。</div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">什么是“日常抓手”？能举个例子吗？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">“抓手”是你<strong>不需要换工作、不需要额外时间，在现有岗位上就能刻意练习的具体场景</strong>。比如：<div class="grip-grid"><span class="grip-item">🗣️ 每周例会发言时练习“结论先行”</span><span class="grip-item">📝 在N+1和N+2都在场的情况下探讨公司战略层面的问题”</span><span class="grip-item">🤝 与供应商谈判时练习“专业影响力表达”</span><span class="grip-item">🍽️ 处理员工冲突与客户投诉时练习“高情商沟通”</span></div><strong>有了职业目标，日复一日的工作就不再是“消耗”，而是“修炼”</strong>。无论何时需要找工作，你可以很自信地告诉雇主我在之前这个平凡的岗位上付出过不平凡的努力，也取得过不平凡的业绩。哪怕已经39岁、43岁，这种不平凡也值得雇主珍视。</div></div></div>
+    <div class="qa-card"><div class="qa-q"><div class="q-icon">Q</div><div class="q-text">可以先了解一下再决定吗？</div><i class="fas fa-chevron-down"></i></div><div class="qa-a"><div class="a-icon">A</div><div class="a-text">当然。我们提供<strong>免费20分钟职场诊断通话</strong>，你可以先聊聊你的现状和困惑，确认适合自己再做决定。<a href="#freeConsult" style="color:#e89c3e;">点击这里预约 →</a></div></div></div>
+  </div>
+
+  <!-- 学员反馈图片区 - 三张图片 -->
+  <div class="case-gallery">
+    <div class="case-title">
+      <i class="fas fa-comment-dots" style="color:#e89c3e;"></i> 学员口碑 · 真实截图
+    </div>
+    <div class="gallery-container">
+      <div class="ratio-16-9">
+        <div class="feedback-grid">
+          <div class="feedback-item"><img src="Feedback 01.png" alt="学员反馈1" onerror="this.src='https://placehold.co/400x1000?text=Feedback01'"></div>
+          <div class="feedback-item"><img src="Feedback 02.png" alt="学员反馈2" onerror="this.src='https://placehold.co/400x1000?text=Feedback02'"></div>
+          <div class="feedback-item"><img src="Feedback 03.png" alt="学员反馈3" onerror="this.src='https://placehold.co/400x1000?text=Feedback03'"></div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size: 12px; color: #5f8aa5; margin-top: 12px; text-align: center;">* 以上信息为保护隐私已做脱敏处理</p>
+  </div>
+
+  <!-- 底部转化 -->
+  <div class="footer-card" id="freeConsult">
+    <i class="fas fa-chart-line" style="font-size: 32px; color: #e89c3e;"></i>
+    <h3 style="margin: 10px 0 6px;">免费 · 20分钟职场诊断（价值399元）</h3>
+    <p style="margin-bottom: 14px; font-size: 13px;">聊聊你的焦虑、瓶颈、期望，无压力决策</p>
+    <div class="btn-group">
+      <a href="#" class="btn">📱 添加微信 lukeliu2017</a>
+      <a href="#" class="btn btn-outline">📞 预约免费诊断</a>
+    </div>
+    <div style="display: flex; justify-content: center; gap: 16px; margin-top: 16px;">
+      <div><img src="qrcode.jpeg" alt="微信二维码" style="width: 80px; border-radius: 12px;"><div style="font-size: 10px;">教练微信</div></div>
+      <div><img src="pay.png" alt="付款码" style="width: 80px; border-radius: 12px;"><div style="font-size: 10px;">直接购买1299</div></div>
+    </div>
+  </div>
+</div>
+
+<a href="#freeConsult" class="cta-float"><i class="fas fa-headset"></i> 免费诊断</a>
+
+<script>
+  document.querySelectorAll('.qa-card').forEach(card => {
+    const questionDiv = card.querySelector('.qa-q');
+    const answerDiv = card.querySelector('.qa-a');
+    if(!questionDiv || !answerDiv) return;
+    const icon = questionDiv.querySelector('.fa-chevron-down');
+    questionDiv.addEventListener('click', () => {
+      const isActive = answerDiv.classList.contains('active');
+      if (!isActive) {
+        answerDiv.classList.add('active');
+        if(icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        answerDiv.classList.remove('active');
+        if(icon) icon.style.transform = 'rotate(0deg)';
+      }
+    });
+    answerDiv.classList.remove('active');
+    if(icon) icon.style.transform = 'rotate(0deg)';
+  });
+  const firstCard = document.querySelector('.qa-card');
+  if(firstCard) {
+    const firstAnswer = firstCard.querySelector('.qa-a');
+    const firstIcon = firstCard.querySelector('.fa-chevron-down');
+    if(firstAnswer) {
+      firstAnswer.classList.add('active');
+      if(firstIcon) firstIcon.style.transform = 'rotate(180deg)';
+    }
+  }
+</script>
+</body>
+</html>
