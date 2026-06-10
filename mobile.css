@@ -1,0 +1,295 @@
+/* 手机端与触摸设备适配 */
+@media (max-width: 768px) {
+  html, body {
+    background: #C2F1C8;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 100%;
+    min-height: 100dvh;
+    overflow: hidden;
+  }
+
+  .slide {
+    width: 100%;
+    width: 100vw;
+    height: 100%;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+  }
+
+  .content {
+    height: auto;
+    min-height: 0;
+    max-height: calc(100dvh - 3.25rem - env(safe-area-inset-bottom, 0px));
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem 1rem 0.75rem;
+    padding-top: max(1rem, env(safe-area-inset-top, 0px));
+  }
+
+  h1 {
+    font-size: 1.45rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.5rem;
+  }
+
+  ul {
+    gap: 0.85rem;
+    overflow: visible;
+  }
+
+  li {
+    font-size: 0.9rem;
+    padding-left: 1.25rem;
+    line-height: 1.55;
+  }
+
+  li::before {
+    width: 7px;
+    height: 7px;
+    top: 0.5em;
+  }
+
+  .goal-text,
+  .recruit-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 1rem 1.15rem;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.45rem 0.65rem;
+    padding-bottom: max(0.45rem, env(safe-area-inset-bottom, 0px));
+    background: rgba(194, 241, 200, 0.97);
+    border-top: 1px solid rgba(90, 158, 122, 0.45);
+    z-index: 10;
+  }
+
+  .page-num {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(2.85rem + env(safe-area-inset-bottom, 0px));
+    font-size: 0.68rem;
+    z-index: 11;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .nav-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.78rem;
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .nav-btn:hover {
+    transform: none;
+  }
+
+  .nav-btn:active {
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  /* 封面页 */
+  .slide:has(.overlay) .content {
+    padding: 2rem 1.25rem 1rem;
+    justify-content: flex-start;
+    padding-top: max(2.5rem, env(safe-area-inset-top, 0px));
+  }
+
+  .slide:has(.overlay) .logo {
+    bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px));
+    left: 1rem;
+    max-height: 48px;
+    max-width: 40%;
+  }
+
+  .slide:has(.overlay) .date {
+    font-size: 1rem;
+  }
+
+  /* 时间线页 */
+  .timeline {
+    gap: 0.75rem;
+    overflow: visible;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.88rem;
+  }
+
+  .timeline-date {
+    min-width: unset;
+    width: 100%;
+    text-align: left;
+    font-size: 0.82rem;
+  }
+
+  .timeline-desc {
+    padding-top: 0;
+  }
+
+  /* 领导力赋能页：图文上下排列 */
+  .content:has(.left) {
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .content:has(.left) .right {
+    flex: none;
+    order: -1;
+    width: 100%;
+  }
+
+  .content:has(.left) .right img {
+    max-height: 140px;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .content:has(.left) ul {
+    gap: 0.75rem;
+  }
+
+  .content:has(.left) li {
+    font-size: 0.88rem;
+  }
+
+  /* 感谢页 */
+  .contact-wrap {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  .contact-info {
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-info p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .contact-info .name {
+    font-size: 1.15rem;
+  }
+
+  .qrcode img {
+    width: 130px;
+    height: 130px;
+  }
+
+  /* 报价页：表格卡片化 */
+  .table-wrap {
+    overflow: visible;
+  }
+
+  table {
+    font-size: 0.82rem;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tbody tr {
+    display: block;
+    margin-bottom: 0.65rem;
+    border: 1px solid rgba(90, 158, 122, 0.55);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  table tbody td {
+    display: block;
+    border: none;
+    border-bottom: 1px solid rgba(90, 158, 122, 0.2);
+    padding: 0.5rem 0.75rem;
+  }
+
+  table tbody td:last-child {
+    border-bottom: none;
+  }
+
+  table tbody tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.45);
+  }
+
+  table tbody td.col-no {
+    background: rgba(61, 139, 106, 0.28);
+    font-weight: 700;
+    color: #1a4d3a;
+    font-size: 0.78rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  table tbody td.col-item::before,
+  table tbody td.col-detail::before,
+  table tbody td.col-amount::before {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: #1a4d3a;
+    margin-bottom: 0.2rem;
+  }
+
+  table tbody td.col-item::before { content: "服务项目"; }
+  table tbody td.col-detail::before { content: "说明"; }
+  table tbody td.col-amount::before { content: "费用"; }
+
+  table tbody td.col-no::before { content: "序号"; }
+
+  .col-no { text-align: left; }
+
+  .payment-note {
+    margin-top: 0.65rem;
+    font-size: 0.8rem;
+    padding: 0.55rem 0.7rem;
+  }
+}
+
+/* 小屏手机进一步收紧 */
+@media (max-width: 380px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  li,
+  .timeline-item,
+  .content:has(.left) li {
+    font-size: 0.84rem;
+  }
+
+  .nav-btn {
+    font-size: 0.72rem;
+    padding: 0.45rem 0.6rem;
+  }
+}

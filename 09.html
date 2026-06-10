@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>项目目标 - 国芙藏象馆</title>
+  <title>感谢 - 国芙藏象馆</title>
   <link rel="stylesheet" href="mobile.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,28 +26,53 @@
     }
     .content {
       height: 100%;
-      padding: 8% 10% 14%;
+      padding: 8% 8% 14%;
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: center;
+      text-align: center;
     }
     h2 {
-      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-size: clamp(2rem, 4vw, 3rem);
       color: #1a4d3a;
       font-weight: 700;
       margin-bottom: 6%;
-      padding-bottom: 0.8rem;
-      border-bottom: 3px solid #5a9e7a;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.15em;
     }
-    .goal-text {
-      font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+    .contact-wrap {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      margin-top: 2%;
+    }
+    .contact-info {
+      text-align: left;
+    }
+    .contact-info p {
+      font-size: clamp(1rem, 2vw, 1.35rem);
       color: #2a5a45;
-      line-height: 1.9;
-      padding: 2rem 2.5rem;
-      background: rgba(255,255,255,0.45);
-      border-radius: 8px;
-      border-left: 5px solid #3d8b6a;
+      line-height: 2;
+    }
+    .contact-info .name {
+      font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+      font-weight: 600;
+      color: #1a4d3a;
+      margin-bottom: 0.5rem;
+    }
+    .qrcode img {
+      width: clamp(120px, 18vw, 180px);
+      height: clamp(120px, 18vw, 180px);
+      object-fit: contain;
+      border-radius: 6px;
+      background: #fff;
+      padding: 8px;
+      box-shadow: 0 4px 16px rgba(26,77,58,0.15);
+    }
+    .qrcode-label {
+      font-size: 0.8rem;
+      color: #3d6b55;
+      margin-top: 0.5rem;
     }
     .footer {
       position: absolute;
@@ -89,14 +114,24 @@
 <body>
   <div class="slide">
     <div class="content">
-      <h2>项目目标</h2>
-      <p class="goal-text">通过人才测评、教练辅导以及服务和运营体系流程的搭建，有力支持公司快速开店的战略。</p>
+      <h2>感谢聆听</h2>
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <p class="name">刘翔</p>
+          <p>137.2517.5539</p>
+          <p>luke.liu@rg-consulting.cn</p>
+        </div>
+        <div class="qrcode">
+          <img src="images/qrcode.jpeg" alt="">
+          <p class="qrcode-label">微信扫码联系</p>
+        </div>
+      </div>
     </div>
     <div class="footer">
-      <a class="nav-btn" href="02.html">← 上一页</a>
-      <a class="nav-btn" href="04.html">下一页 →</a>
+      <a class="nav-btn" href="08.html">← 上一页</a>
+      <span></span>
     </div>
-    <span class="page-num">第3页，共9页</span>
+    <span class="page-num">第9页，共9页</span>
   </div>
 </body>
 </html>
