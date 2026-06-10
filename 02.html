@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>国芙藏象馆人力资源解决方案</title>
+  <title>项目目的 - 国芙藏象馆</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
@@ -20,46 +20,48 @@
       position: relative;
       width: min(100vw, 177.78vh);
       height: min(56.25vw, 100vh);
-      background: #C2F1C8 url("images/cover.webp") center/cover no-repeat;
+      background: #C2F1C8;
       overflow: hidden;
     }
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(194,241,200,0.85) 0%, rgba(194,241,200,0.55) 50%, rgba(194,241,200,0.75) 100%);
-    }
     .content {
-      position: relative;
-      z-index: 2;
       height: 100%;
+      padding: 8% 8% 14%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 8% 10%;
-      text-align: center;
     }
-    h1 {
-      font-size: clamp(2rem, 4.5vw, 3.2rem);
-      font-weight: 700;
+    h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
       color: #1a4d3a;
-      letter-spacing: 0.08em;
-      line-height: 1.4;
-      margin-bottom: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 5%;
+      padding-bottom: 0.8rem;
+      border-bottom: 3px solid #5a9e7a;
+      letter-spacing: 0.05em;
     }
-    .date {
-      font-size: clamp(1rem, 2vw, 1.4rem);
-      color: #2d6b4f;
-      font-weight: 500;
+    ul {
+      list-style: none;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3.5%;
+      padding-left: 0.5rem;
     }
-    .logo {
+    li {
+      font-size: clamp(1rem, 2.2vw, 1.35rem);
+      color: #2a5a45;
+      line-height: 1.6;
+      padding-left: 2rem;
+      position: relative;
+    }
+    li::before {
+      content: "";
       position: absolute;
-      bottom: 12%;
-      left: 5%;
-      z-index: 3;
-      max-height: 12%;
-      max-width: 22%;
-      object-fit: contain;
+      left: 0;
+      top: 0.55em;
+      width: 10px;
+      height: 10px;
+      background: #3d8b6a;
+      border-radius: 50%;
     }
     .footer {
       position: absolute;
@@ -91,29 +93,29 @@
       border-radius: 4px;
       text-decoration: none;
       transition: background 0.2s, transform 0.15s;
-      cursor: pointer;
     }
     .nav-btn:hover {
       background: rgba(255,255,255,0.95);
       transform: translateY(-1px);
     }
-    .nav-left { margin-right: auto; }
-    .nav-right { margin-left: auto; }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="overlay"></div>
-    <img class="logo" src="images/company logo.png" alt="公司 Logo">
     <div class="content">
-      <h1>国芙藏象馆<br>人力资源解决方案</h1>
-      <p class="date">2026.6.11</p>
+      <h2>项目目的</h2>
+      <ul>
+        <li>为国芙藏象馆门店梳理运营标准与流程</li>
+        <li>搭建一个能快速高效培养门店店长的体系流程</li>
+        <li>为公司创始人提供领导力赋能</li>
+        <li>招募合适的人力行政负责人支撑公司的后台运营</li>
+      </ul>
     </div>
     <div class="footer">
-      <span></span>
-      <a class="nav-btn nav-right" href="02.html">下一页 →</a>
+      <a class="nav-btn" href="index.html">← 上一页</a>
+      <a class="nav-btn" href="03.html">下一页 →</a>
     </div>
-    <span class="page-num">第1页，共9页</span>
+    <span class="page-num">第2页，共9页</span>
   </div>
 </body>
 </html>

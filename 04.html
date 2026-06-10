@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>梳理门店运营标准与流程 - 国芙藏象馆</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #1a3a2a;
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slide {
+      position: relative;
+      width: min(100vw, 177.78vh);
+      height: min(56.25vw, 100vh);
+      background: #C2F1C8;
+      overflow: hidden;
+    }
+    .content {
+      height: 100%;
+      padding: 6% 6% 13%;
+      display: flex;
+      flex-direction: column;
+    }
+    h2 {
+      font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+      color: #1a4d3a;
+      font-weight: 700;
+      margin-bottom: 3%;
+      padding-bottom: 0.6rem;
+      border-bottom: 3px solid #5a9e7a;
+      letter-spacing: 0.03em;
+    }
+    .timeline {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2.2%;
+      overflow: hidden;
+    }
+    .timeline-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      font-size: clamp(0.78rem, 1.5vw, 1.05rem);
+      color: #2a5a45;
+      line-height: 1.5;
+    }
+    .timeline-date {
+      flex-shrink: 0;
+      font-weight: 600;
+      color: #1a4d3a;
+      min-width: 28%;
+      padding: 0.35rem 0.6rem;
+      background: rgba(61,139,106,0.2);
+      border-radius: 4px;
+      text-align: center;
+    }
+    .timeline-desc {
+      flex: 1;
+      padding-top: 0.2rem;
+    }
+    .footer {
+      position: absolute;
+      bottom: 3%;
+      left: 0;
+      right: 0;
+      z-index: 4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 4%;
+    }
+    .page-num {
+      font-size: 0.75rem;
+      color: #3d6b55;
+      opacity: 0.85;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 3%;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.45rem 1.2rem;
+      font-size: 0.85rem;
+      color: #1a4d3a;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid #5a9e7a;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .nav-btn:hover {
+      background: rgba(255,255,255,0.95);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="content">
+      <h2>梳理门店运营标准与流程</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-date">6月12–21日</span>
+          <span class="timeline-desc">公司对新入职的门店店长进行培训后上岗工作</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">6月22–26日</span>
+          <span class="timeline-desc">安排顾问赴长沙三家门店驻点，通过实地考察和与店长交流，整理录音记录，梳理服务标准与流程</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">6月29–30日</span>
+          <span class="timeline-desc">顾问整理出店务运营标准与流程初稿供公司审核，并给予专业意见反馈</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">预计7月10日前</span>
+          <span class="timeline-desc">定稿，当周以在线培训的方式对店长进行培训，预计每次2小时，3次共6小时</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">2周后</span>
+          <span class="timeline-desc">由公司对三家门店做一次服务审计打分，并对店长的管理给予指导反馈</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <a class="nav-btn" href="03.html">← 上一页</a>
+      <a class="nav-btn" href="05.html">下一页 →</a>
+    </div>
+    <span class="page-num">第4页，共9页</span>
+  </div>
+</body>
+</html>

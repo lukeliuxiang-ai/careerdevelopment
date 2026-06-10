@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>国芙藏象馆人力资源解决方案</title>
+  <title>感谢 - 国芙藏象馆</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
@@ -20,46 +20,58 @@
       position: relative;
       width: min(100vw, 177.78vh);
       height: min(56.25vw, 100vh);
-      background: #C2F1C8 url("images/cover.webp") center/cover no-repeat;
+      background: #C2F1C8;
       overflow: hidden;
     }
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(194,241,200,0.85) 0%, rgba(194,241,200,0.55) 50%, rgba(194,241,200,0.75) 100%);
-    }
     .content {
-      position: relative;
-      z-index: 2;
       height: 100%;
+      padding: 8% 8% 14%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      padding: 8% 10%;
+      justify-content: center;
       text-align: center;
     }
-    h1 {
-      font-size: clamp(2rem, 4.5vw, 3.2rem);
-      font-weight: 700;
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
       color: #1a4d3a;
-      letter-spacing: 0.08em;
-      line-height: 1.4;
-      margin-bottom: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 6%;
+      letter-spacing: 0.15em;
     }
-    .date {
-      font-size: clamp(1rem, 2vw, 1.4rem);
-      color: #2d6b4f;
-      font-weight: 500;
+    .contact-wrap {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      margin-top: 2%;
     }
-    .logo {
-      position: absolute;
-      bottom: 12%;
-      left: 5%;
-      z-index: 3;
-      max-height: 12%;
-      max-width: 22%;
+    .contact-info {
+      text-align: left;
+    }
+    .contact-info p {
+      font-size: clamp(1rem, 2vw, 1.35rem);
+      color: #2a5a45;
+      line-height: 2;
+    }
+    .contact-info .name {
+      font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+      font-weight: 600;
+      color: #1a4d3a;
+      margin-bottom: 0.5rem;
+    }
+    .qrcode img {
+      width: clamp(120px, 18vw, 180px);
+      height: clamp(120px, 18vw, 180px);
       object-fit: contain;
+      border-radius: 6px;
+      background: #fff;
+      padding: 8px;
+      box-shadow: 0 4px 16px rgba(26,77,58,0.15);
+    }
+    .qrcode-label {
+      font-size: 0.8rem;
+      color: #3d6b55;
+      margin-top: 0.5rem;
     }
     .footer {
       position: absolute;
@@ -91,29 +103,34 @@
       border-radius: 4px;
       text-decoration: none;
       transition: background 0.2s, transform 0.15s;
-      cursor: pointer;
     }
     .nav-btn:hover {
       background: rgba(255,255,255,0.95);
       transform: translateY(-1px);
     }
-    .nav-left { margin-right: auto; }
-    .nav-right { margin-left: auto; }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="overlay"></div>
-    <img class="logo" src="images/company logo.png" alt="公司 Logo">
     <div class="content">
-      <h1>国芙藏象馆<br>人力资源解决方案</h1>
-      <p class="date">2026.6.11</p>
+      <h2>感谢聆听</h2>
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <p class="name">刘翔</p>
+          <p>137.2517.5539</p>
+          <p>luke.liu@rg-consulting.cn</p>
+        </div>
+        <div class="qrcode">
+          <img src="images/qrcode.jpeg" alt="">
+          <p class="qrcode-label">微信扫码联系</p>
+        </div>
+      </div>
     </div>
     <div class="footer">
+      <a class="nav-btn" href="08.html">← 上一页</a>
       <span></span>
-      <a class="nav-btn nav-right" href="02.html">下一页 →</a>
     </div>
-    <span class="page-num">第1页，共9页</span>
+    <span class="page-num">第9页，共9页</span>
   </div>
 </body>
 </html>

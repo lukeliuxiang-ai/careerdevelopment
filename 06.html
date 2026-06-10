@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公司创始人领导力赋能 - 国芙藏象馆</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #1a3a2a;
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slide {
+      position: relative;
+      width: min(100vw, 177.78vh);
+      height: min(56.25vw, 100vh);
+      background: #C2F1C8;
+      overflow: hidden;
+    }
+    .content {
+      height: 100%;
+      padding: 6% 5% 13%;
+      display: flex;
+      gap: 4%;
+    }
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    h2 {
+      font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+      color: #1a4d3a;
+      font-weight: 700;
+      margin-bottom: 4%;
+      padding-bottom: 0.6rem;
+      border-bottom: 3px solid #5a9e7a;
+      letter-spacing: 0.03em;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4%;
+      flex: 1;
+    }
+    li {
+      font-size: clamp(0.85rem, 1.6vw, 1.1rem);
+      color: #2a5a45;
+      line-height: 1.6;
+      padding-left: 1.6rem;
+      position: relative;
+    }
+    li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 8px;
+      height: 8px;
+      background: #3d8b6a;
+      border-radius: 50%;
+    }
+    .right {
+      flex: 0 0 38%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .right img {
+      max-width: 100%;
+      max-height: 75%;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 4px 16px rgba(26,77,58,0.15);
+    }
+    .footer {
+      position: absolute;
+      bottom: 3%;
+      left: 0;
+      right: 0;
+      z-index: 4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 4%;
+    }
+    .page-num {
+      font-size: 0.75rem;
+      color: #3d6b55;
+      opacity: 0.85;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 3%;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.45rem 1.2rem;
+      font-size: 0.85rem;
+      color: #1a4d3a;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid #5a9e7a;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .nav-btn:hover {
+      background: rgba(255,255,255,0.95);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="content">
+      <div class="left">
+        <h2>公司创始人领导力赋能</h2>
+        <ul>
+          <li>顾问跟随创始人工作一天，参与公司例会、客户接待和处理日常事务，记录其工作节奏和沟通特点</li>
+          <li>创始人完成 Harrison 测评，并接受顾问解读，明确领导力赋能的目标和抓手</li>
+          <li>创始人每周与顾问沟通 45–60 分钟，围绕预定目标做领导力行为纠偏与改善做沟通，时间持续 6 个月</li>
+        </ul>
+      </div>
+      <div class="right">
+        <img src="images/MG.webp" alt="">
+      </div>
+    </div>
+    <div class="footer">
+      <a class="nav-btn" href="05.html">← 上一页</a>
+      <a class="nav-btn" href="07.html">下一页 →</a>
+    </div>
+    <span class="page-num">第6页，共9页</span>
+  </div>
+</body>
+</html>
